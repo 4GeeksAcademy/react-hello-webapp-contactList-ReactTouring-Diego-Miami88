@@ -3,15 +3,12 @@ export const initialStore=()=>{
     message: null,
     todos: [
       {
+        picture: "",
         id: 1,
-        title: "Make the bed",
+        description: "Make the bed",
         background: null,
       },
-      {
-        id: 2,
-        title: "Do my homework",
-        background: null,
-      }
+      
     ]
   }
 }
