@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import useGlobalReducer from "./useGlobalReducer";
 
 const useActions = () => {
@@ -7,6 +8,6 @@ const useActions = () => {
     console.log(store);
     return
   }
-  return {callConsolelog}
+  return {callConsolelog, useEffect}
 };
 export default useActions;
