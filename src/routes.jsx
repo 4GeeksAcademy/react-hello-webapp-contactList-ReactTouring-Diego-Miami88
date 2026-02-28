@@ -9,8 +9,8 @@ import { Layout } from "./pages/Layout";
 import { Home } from "./pages/Home";
 import { Single } from "./pages/Single";
 import { Demo } from "./pages/Demo";
-import { StoreProvider } from "./hooks/useGlobalReducer";
-
+import { AddContact } from "./pages/AddContact"
+import { EditContact } from "./pages/EditContact"
 
 export const router = createBrowserRouter(
     createRoutesFromElements(
@@ -27,10 +27,8 @@ export const router = createBrowserRouter(
         <Route path= "/" element={<Home />} />
         <Route path="/single/:theId" element={ <Single />} />  {/* Dynamic route for single items */}
         <Route path="/demo" element={<Demo />} />
-        <Route path="/ store" element={<StoreProvider><Home /></StoreProvider>} /> {/* Route for the store page, wrapped with StoreProvider to provide global state. */}
-        <Route path="*" element={<h1>Not found!</h1>} /> {/* Catch-all route for undefined paths, showing a "Not found!" message. */} 
-        <Route path="/contact" element={<Home />} /> {/* Route for the contact page, rendering the Home component. */}    
-        <Route path="/contact/:contactId" element={<Home />} /> {/* Dynamic route for individual contact details, rendering the Home component. */}   
+        <Route path="/add-contact" element={<AddContact />} />
+        <Route path="/edit-contact/:theId" element={<EditContact />} /> {/* Dynamic route for editing contacts, reusing the EditContact component */}
         
       </Route>
     )

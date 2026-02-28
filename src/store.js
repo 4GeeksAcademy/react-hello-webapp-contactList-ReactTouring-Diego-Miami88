@@ -29,6 +29,8 @@ export default function storeReducer(store, action = {}) { // parameters pass st
         ...store,
         contacts: action.payload
       }
+    
+
     default:
       throw Error('Unknown action.'); // if a unknown action type is sent, it throws an error. This is a common patter in React's useReducer to catch bugs early.
   }    
